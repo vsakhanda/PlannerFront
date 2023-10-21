@@ -1,9 +1,31 @@
 /* Application-wide Styles */
+
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.menu-item {
+  display: inline-block;
+  margin: 0 10px; /* Встановіть бажаний відступ між пунктами меню */
+  padding: 10px 20px;
+  border: 1px solid #007BFF; /* Синій колір границі */
+  background-color: #fff; /* Білий колір фону */
+  border-radius: 5px; /* Закруглені кути */
+  text-decoration: none; /* Заборона підчеркування тексту */
+  color: #007BFF; /* Синій колір тексту */
+}
+
+/* Стиль для наведення курсору на пункт меню */
+.menu-item:hover {
+  background-color: #007BFF; /* Зміна фону при наведенні */
+  color: #fff; /* Зміна кольору тексту при наведенні */
+}
+
+
+
 h1 {
-  color: #369;
+  color: #007BFF;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
+  align-content: flex-end;
 }
 h2, h3 {
   color: #444;

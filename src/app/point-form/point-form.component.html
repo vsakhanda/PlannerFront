@@ -3,7 +3,7 @@
     <h1>Hero Form</h1>
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
       <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Навза</label>
         <input type="text" class="form-control" id="name"
                required
                [(ngModel)]="model.name" name="name"
@@ -15,16 +15,16 @@
       </div>
 
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
+        <label for="alterEgo">Місце розташування</label>
         <input type="text" class="form-control" id="alterEgo"
                [(ngModel)]="model.alterEgo" name="alterEgo">
       </div>
 
       <div class="form-group">
-        <label for="power">Hero Power</label>
+        <label for="power">Сила визначного місця</label>
         <select class="form-control" id="power"
                 required
-                [(ngModel)]="model.power" name="power"
+                [(ngModel)]="model.power" назва="power"
                 #power="ngModel">
           <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
         </select>
@@ -33,13 +33,13 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
-      <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
-      <em>with</em> reset
+      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Створити</button>
+      <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">Нове місце</button>
+      <em>з</em> очищенням форми
 
       &nbsp;&nbsp;
-      <button type="button" class="btn btn-default" (click)="newHero()">New Hero</button>
-      <em>without</em> reset
+      <button type="button" class="btn btn-default" (click)="newHero()">Нове місце </button>
+      <em>без</em> очищення форми
 
       <!-- NOT SHOWN IN DOCS -->
       <div>
@@ -53,7 +53,7 @@
   <div [hidden]="!submitted">
     <h2>You submitted the following:</h2>
     <div class="row">
-      <div class="col-xs-3">Name</div>
+      <div class="col-xs-3">Назва </div>
       <div class="col-xs-9">{{ model.name }}</div>
     </div>
     <div class="row">
@@ -61,11 +61,11 @@
       <div class="col-xs-9">{{ model.alterEgo }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Power</div>
+      <div class="col-xs-3">Сила</div>
       <div class="col-xs-9">{{ model.power }}</div>
     </div>
     <br>
-    <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
+    <button type="button" class="btn btn-primary" (click)="submitted=false">Редагувати</button>
   </div>
 </div>
 
@@ -94,7 +94,7 @@
     <h1>Hero Form</h1>
     <form>
       <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Назва</label>
         <input type="text" class="form-control" id="name" required>
       </div>
 
@@ -104,7 +104,7 @@
       </div>
 
       <div class="form-group">
-        <label for="power">Hero Power</label>
+        <label for="power">Сила місця</label>
         <select class="form-control" id="power" required>
           <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
         </select>
@@ -118,7 +118,7 @@
   <!-- ====================================================  -->
   <hr>
   <div class="container">
-    <h1>Hero Form</h1>
+    <h1>Нова форма місця</h1>
     <form #heroForm="ngForm">
       {{ model | json }}
       <div class="form-group">

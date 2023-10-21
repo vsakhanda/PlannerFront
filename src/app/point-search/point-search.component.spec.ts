@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroSearchComponent } from './hero-search.component';
+import { PointSearchComponent } from './point-search.component';
 
 describe('HeroSearchComponent', () => {
-  let component: HeroSearchComponent;
-  let fixture: ComponentFixture<HeroSearchComponent>;
+  let component: PointSearchComponent;
+  let fixture: ComponentFixture<PointSearchComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeroSearchComponent]
+      declarations: [PointSearchComponent]
     });
-    fixture = TestBed.createComponent(HeroSearchComponent);
+    fixture = TestBed.createComponent(PointSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

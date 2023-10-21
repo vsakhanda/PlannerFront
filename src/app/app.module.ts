@@ -12,9 +12,10 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
-import {HeroFormComponent} from "./hero-form/hero-form.component";
+import {PointFormComponent} from './point-form/point-form.component';
+import {PointSearchComponent} from "./point-search/point-search.component";
+import {HomeComponent} from "./home/home.component";
 
 @NgModule({
   imports: [
@@ -36,8 +37,9 @@ import {HeroFormComponent} from "./hero-form/hero-form.component";
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent,
-    HeroFormComponent
+    PointSearchComponent,
+    PointFormComponent,
+    HomeComponent
   ],
   bootstrap: [ AppComponent ]
 })
