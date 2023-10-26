@@ -1,7 +1,7 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Hero Form</h1>
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #pointForm="ngForm">
       <div class="form-group">
         <label for="name">Навза</label>
         <input type="text" class="form-control" id="name"
@@ -33,8 +33,8 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Створити</button>
-      <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">Нове місце</button>
+      <button type="submit" class="btn btn-success" [disabled]="!pointForm.form.valid">Створити</button>
+      <button type="button" class="btn btn-default" (click)="newHero(); pointForm.reset()">Нове місце</button>
       <em>з</em> очищенням форми
 
       &nbsp;&nbsp;
@@ -44,7 +44,7 @@
       <!-- NOT SHOWN IN DOCS -->
       <div>
         <hr>
-        Name via form.controls = {{showFormControls(heroForm)}}
+        Name via form.controls = {{showFormControls(pointForm)}}
       </div>
       <!-- - -->
     </form>
@@ -63,6 +63,42 @@
     <div class="row">
       <div class="col-xs-3">Сила</div>
       <div class="col-xs-9">{{ model.power }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.latitude1 }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.longitude }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.link }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.description }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.district }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.point_adress }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.phone_number }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.regions }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-9">{{ model.point_adress }}</div>
     </div>
     <br>
     <button type="button" class="btn btn-primary" (click)="submitted=false">Редагувати</button>
@@ -109,6 +145,42 @@
           <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
         </select>
       </div>
+      <div class="form-group">
+        <label for="latitude1">latitude</label>
+        <input type="text" class="form-control" id="latitude1">
+      </div>
+
+      <div class="form-group">
+        <label for="lontitude">Alter Ego</label>
+        <input type="text" class="form-control" id="lontitude">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>      <div class="form-group">
+      <label for="alterEgo">Alter Ego</label>
+      <input type="text" class="form-control" id="alterEgo">
+    </div>
 
       <button type="submit" class="btn btn-success">Submit</button>
 
