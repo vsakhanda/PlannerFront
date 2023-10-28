@@ -2,6 +2,7 @@
 label {
   color: #435960;
   font-weight: bold;
+  width: 18rem;
 }
 input {
   font-size: 1em;
@@ -13,7 +14,7 @@ button {
   background-color: #eee;
   padding: 1rem;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 3rem;
 }
 button:hover {
   background-color: #cfd8dc;

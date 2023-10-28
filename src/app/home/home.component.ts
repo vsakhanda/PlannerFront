@@ -7,10 +7,7 @@ import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-home',
-  template: `
-
-    <H1>ДОМАШНЯ СТОРІНКА</H1>
-  `,
+  templateUrl:'./home.component.html',
   styleUrls: ['./home.component.css']
 })
 

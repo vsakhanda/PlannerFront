@@ -1,18 +1,22 @@
 <div class="container">
   <div [hidden]="submitted">
-    <h1>Hero Form</h1>
+    <h1>Форма введення точки (компонент point-form1)</h1>
     <form (ngSubmit)="onSubmit()" #pointForm="ngForm">
       <div class="form-group">
-        <label for="name">Навза</label>
-        <input type="text" class="form-control" id="name"
-               required
-               [(ngModel)]="model.name" name="name"
+        <label for="name">Назва</label>
+        <input type="text" class="form-control" id="Nam"
+               required  [(ngModel)]="model.name" name="name"
                #name="ngModel">
         <div [hidden]="name.valid || name.pristine"
              class="alert alert-danger">
           Name is required
         </div>
       </div>
+
+
+
+<!--      Example 1: <input [(ngModel)]="person.firstName" name="first">-->
+<!--      Example 2: <input [(ngModel)]="person.firstName" [ngModelOptions]="{standalone: true}">-->
 
       <div class="form-group">
         <label for="alterEgo">Місце розташування</label>
@@ -22,7 +26,7 @@
 
       <div class="form-group">
         <label for="power">Сила визначного місця</label>
-        <select class="form-control" id="power"
+        <select class="form-control"
                 required
                 [(ngModel)]="model.power" назва="power"
                 #power="ngModel">
@@ -32,6 +36,106 @@
           Power is required
         </div>
       </div>
+
+      <div class="form-group">
+        <label for="name">Довгота</label>
+        <input type="text" class="form-control" id="longitude"
+                 required
+                 [(ngModel)]="model.longitude" name="longitude"
+                 #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+               class="alert alert-danger">
+            Довгота обов'язкова
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="name">Широта</label>
+        <input type="text" class="form-control" id="latitude"
+               required
+               [(ngModel)]="model.latitude" name="latitude"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+                 class="alert alert-danger">
+          Широта обов'язкова
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="name">Опис</label>
+        <input type="text" class="form-control" id="description"
+               required
+               [(ngModel)]="model.description" name="description"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+                Опис потрібен
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Адреса</label>
+        <input type="text" class="form-control" id="point_adress"
+               required
+               [(ngModel)]="model.point_adress" name="point_adress"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Адреса
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="name">Адреса</label>
+        <input type="text" class="form-control" id="phone_number"
+               required
+               [(ngModel)]="model.phone_number" name="phone_number"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Адреса потрібна
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Посилання</label>
+        <input type="text" class="form-control" id="link"
+               required
+               [(ngModel)]="model.link" name="link"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+                         class="alert alert-danger">
+                      Посилання
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">district</label>
+        <input type="text" class="form-control" id="district"
+               required
+               [(ngModel)]="model.district" name="district"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+                           class="alert alert-danger">
+                        District is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">regions</label>
+        <input type="text" class="form-control" id="regions"
+                               required
+                               [(ngModel)]="model.regions" name="regions"
+                               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+                             class="alert alert-danger">
+                          Regions is required
+        </div>
+      </div>
+
 
       <button type="submit" class="btn btn-success" [disabled]="!pointForm.form.valid">Створити</button>
       <button type="button" class="btn btn-default" (click)="newHero(); pointForm.reset()">Нове місце</button>
@@ -51,7 +155,7 @@
   </div>
 
   <div [hidden]="!submitted">
-    <h2>You submitted the following:</h2>
+    <h2>Ви внесли наступні дані:</h2>
     <div class="row">
       <div class="col-xs-3">Назва </div>
       <div class="col-xs-9">{{ model.name }}</div>
@@ -61,44 +165,40 @@
       <div class="col-xs-9">{{ model.alterEgo }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Сила місця</div>
       <div class="col-xs-9">{{ model.power }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
-      <div class="col-xs-9">{{ model.latitude1 }}</div>
+      <div class="col-xs-3">Широта</div>
+      <div class="col-xs-9">{{ model.latitude }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Довгота</div>
       <div class="col-xs-9">{{ model.longitude }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Посилання на зовнішній ресурс з описом місця</div>
       <div class="col-xs-9">{{ model.link }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Опис ваших вражень</div>
       <div class="col-xs-9">{{ model.description }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Область</div>
       <div class="col-xs-9">{{ model.district }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Адреса</div>
       <div class="col-xs-9">{{ model.point_adress }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Телефонний номер</div>
       <div class="col-xs-9">{{ model.phone_number }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Сила</div>
+      <div class="col-xs-3">Регіон</div>
       <div class="col-xs-9">{{ model.regions }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">Сила</div>
-      <div class="col-xs-9">{{ model.point_adress }}</div>
     </div>
     <br>
     <button type="button" class="btn btn-primary" (click)="submitted=false">Редагувати</button>
@@ -127,7 +227,7 @@
 </style>
 <div class="no-style" style="margin-left: 4px">
   <div class="container">
-    <h1>Hero Form</h1>
+    <h1>Форма введення точки (компонент point-form)</h1>
     <form>
       <div class="form-group">
         <label for="name">Назва</label>
@@ -145,41 +245,43 @@
           <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
         </select>
       </div>
+
       <div class="form-group">
-        <label for="latitude1">latitude</label>
-        <input type="text" class="form-control" id="latitude1">
+        <label for="latitude">Широта</label>
+        <input type="text" class="form-control" id="latitude">
       </div>
 
       <div class="form-group">
-        <label for="lontitude">Alter Ego</label>
+        <label for="lontitude">Довгота</label>
         <input type="text" class="form-control" id="lontitude">
       </div>
 
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <label for="description">Опис місця</label>
+        <input type="text" class="form-control" id="description">
       </div>
 
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <label for="point_adress">Адреса місця</label>
+        <input type="text" class="form-control" id="point_adress">
       </div>
 
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <label for="phone_number">телефонний номер</label>
+        <input type="text" class="form-control" id="phone_number">
       </div>
 
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <label for="link">Посилання</label>
+        <input type="text" class="form-control" id="link">
       </div>
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
-      </div>      <div class="form-group">
-      <label for="alterEgo">Alter Ego</label>
-      <input type="text" class="form-control" id="alterEgo">
+        <label for="district">Область</label>
+        <input type="text" class="form-control" id="district">
+      </div>
+      <div class="form-group">
+      <label for="regions">Регіон</label>
+      <input type="text" class="form-control" id="regions">
     </div>
 
       <button type="submit" class="btn btn-success">Submit</button>
@@ -213,6 +315,55 @@
                 [(ngModel)]="model.power" name="power">
           <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
         </select>
+      </div>
+
+      <div class="form-group">
+        <label for="latitude">Alter latitude</label>
+        <input type="text"  class="form-control" id="latitude"
+               [(ngModel)]="model.latitude" name="latitude">
+      </div>
+
+      <div class="form-group">
+        <label for="longitude">Alter longitude</label>
+        <input type="text"  class="form-control" id="longitude"
+               [(ngModel)]="model.longitude" name="longitude">
+      </div>
+
+      <div class="form-group">
+        <label for="description">Alter description</label>
+        <input type="text"  class="form-control" id="description"
+               [(ngModel)]="model.description" name="description">
+      </div>
+
+
+      <div class="form-group">
+        <label for="point_adress">Alter point_adress</label>
+        <input type="text"  class="form-control" id="point_adress"
+               [(ngModel)]="model.point_adress" name="point_adress">
+      </div>
+
+      <div class="form-group">
+        <label for="phone_number">Alter phone_number</label>
+        <input type="text"  class="form-control" id="phone_number"
+               [(ngModel)]="model.phone_number" name="phone_number">
+      </div>
+
+      <div class="form-group">
+        <label for="link">Alter link</label>
+        <input type="text"  class="form-control" id="link"
+               [(ngModel)]="model.link" name="link">
+      </div>
+
+      <div class="form-group">
+        <label for="district">Alter district</label>
+        <input type="text"  class="form-control" id="district"
+               [(ngModel)]="model.district" name="district">
+      </div>
+
+      <div class="form-group">
+        <label for="regions">Alter district</label>
+        <input type="text"  class="form-control" id="regions"
+               [(ngModel)]="model.regions" name="regions">
       </div>
 
       <button type="submit" class="btn btn-success">Submit</button>

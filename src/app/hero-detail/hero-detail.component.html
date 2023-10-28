@@ -1,21 +1,66 @@
 <div *ngIf="point">
-  <h2>{{point.name | uppercase}} Details</h2>
+  <h2>{{point.name | uppercase}} Деталі внеснеого місця</h2>
   <div><span>id: </span>{{point.id}}</div>
   <div>
-    <label for="point-name">Point name: </label>
-    <input id="point-name" [(ngModel)]="point.name" placeholder="Point name"/>
-    <input id="point-power" [(ngModel)]="point.power" placeholder="Point power"/>
-    <input id="point-alterEgo" [(ngModel)]="point.alterEgo" placeholder="Point alterEgo"/>
-    <input id="point-latitude" [(ngModel)]="point.latitude1" placeholder="Point latitude"/>
-    <input id="point-longitude" [(ngModel)]="point.longitude" placeholder="Point longitude"/>
-    <input id="point-description" [(ngModel)]="point.description" placeholder="Point description"/>
-    <input id="point-point_adress" [(ngModel)]="point.point_adress" placeholder="Point point_adress"/>
-    <input id="point-phone_number" [(ngModel)]="point.phone_number" placeholder="Point phone_number"/>
-    <input id="point-link" [(ngModel)]="point.link" placeholder="Point link"/>
-    <input id="point-district" [(ngModel)]="point.district" placeholder="Point district"/>
-    <input id="point-regions" [(ngModel)]="point.regions" placeholder="Point regions"/>
+
+
+    <div class="row">
+      <label for="point-name">Інформація про місце: </label>
+      <input id="point-name" [(ngModel)]="point.name" placeholder="Point name"/>
+    </div>
+
+    <div class="row">
+      <label for="point-power">Сила місця: </label>
+      <input id="point-power" [(ngModel)]="point.power" placeholder="Point power"/>
+    </div>
+
+    <div class="row">
+      <label for="point-power">Сила місця: </label>
+      <input id="point-alterEgo" [(ngModel)]="point.alterEgo" placeholder="Point alterEgo"/>
+    </div>
+
+    <div class="row">
+      <label for="point-latitude">Широтв: </label>
+      <input id="point-latitude" [(ngModel)]="point.latitude" placeholder="Point latitude"/>
+    </div>
+
+    <div class="row">
+      <label for="point-longitude">Довгота: </label>
+      <input id="point-longitude" [(ngModel)]="point.longitude" placeholder="Point longitude"/>
+    </div>
+
+    <div class="row">
+      <label for="point-description">Опис місця: </label>
+      <input id="point-description" [(ngModel)]="point.description" placeholder="Point description"/>
+    </div>
+
+    <div class="row">
+      <label for="point-point_adress">Адреса місця: </label>
+      <input id="point-point_adress" [(ngModel)]="point.point_adress" placeholder="Point point_adress"/>
+    </div>
+
+    <div class="row">
+      <label for="point-phone_number">Телефонний номер: </label>
+      <input id="point-phone_number" [(ngModel)]="point.phone_number" placeholder="Point phone_number"/>
+    </div>
+
+    <div class="row">
+      <label for="point-link">Посилання : </label>
+      <input id="point-link" [(ngModel)]="point.link" placeholder="Point link"/>
+    </div>
+
+    <div class="row">
+      <label for="point-district">Область: </label>
+      <input id="point-district" [(ngModel)]="point.district" placeholder="Point district"/>
+    </div>
+
+    <div class="row">
+      <label for="point-regions">Регіон: </label>
+      <input id="point-regions" [(ngModel)]="point.regions" placeholder="Point regions"/>
+    </div>
+
 
   </div>
-  <button type="button" (click)="goBack()">go back</button>
-  <button type="button" (click)="save()">save</button>
+  <button type="button" (click)="goBack()">Повернутись</button>
+  <button type="button" (click)="save()">Зберегти зміни</button>
 </div>

@@ -12,17 +12,18 @@ export class PointFormComponent {
   powers = ['Карєр', 'Памятка архітектури',
     'Історичне місце', 'Ресторан'];
 
-  model = new Point(18,
+  model = new Point(
+    18,
     'Dr. IQ', this.powers[0],
-    'Chuck Overstreet',
-    '303030303',
+    3,
+    3,
     '',
     '',
     '',
     '',
     '',
     '',
-    '' );
+    'Chuck Overstreet' );
 
   submitted = false;
 
@@ -34,8 +35,8 @@ export class PointFormComponent {
       42,
       '',
       '',
-      '',
-      '',
+      3,
+      5,
       '',
       '',
       '',
@@ -46,17 +47,19 @@ export class PointFormComponent {
   }
 
   skyDog(): Point {
-    const myPoint =  new Point(42, 'SkyDog',
+    const myPoint =  new Point(
+      42,
+      'SkyDog',
       'Fetch any object at any distance',
-      'Leslie Rollover',
+      7,
+      8,
       '',
       '',
       '',
       '',
       '',
       '',
-      '',
-      '',);
+      'Leslie Rollover');
     console.log('My hero is called ' + myPoint.name); // "My hero is called SkyDog"
     return myPoint;
   }
