@@ -1,0 +1,21 @@
+<h2>Мої місця</h2>
+
+<div>
+  <label for="new-hero">Нове місце: </label>
+  <input id="new-hero" #pointName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(pointName.value); pointName.value=''">
+    Додати місце
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let point of points">
+    <a routerLink="/detail/{{point.id}}">
+      <span class="badge">{{point.id}}</span> {{point.name}}
+    </a>
+    <button type="button" class="delete" title="delete hero"
+            (click)="delete(point)">x</button>
+  </li>
+</ul>

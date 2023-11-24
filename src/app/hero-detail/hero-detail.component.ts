@@ -3,7 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Point } from '../point';
-import { HeroService } from '../hero.service';
+import {PointService} from "../point.service";
+
 
 @Component({
   selector: 'app-hero-detail',
@@ -15,7 +16,7 @@ export class HeroDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: HeroService,
+    private pointService: PointService,
     private location: Location
   ) {}
 
@@ -25,8 +26,8 @@ export class HeroDetailComponent implements OnInit {
 
   getHero(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.heroService.getHero(id)
-      .subscribe(hero => this.point = hero);
+    this.pointService.getPoint(id)
+      .subscribe(point => this.point = point);
   }
 
   goBack(): void {
@@ -35,7 +36,7 @@ export class HeroDetailComponent implements OnInit {
 
   save(): void {
     if (this.point) {
-      this.heroService.updateHero(this.point)
+      this.pointService.updatePoint(this.point)
         .subscribe(() => this.goBack());
     }
   }

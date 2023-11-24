@@ -7,7 +7,8 @@ import {
 } from 'rxjs/operators';
 
 import { Point } from '../point';
-import { HeroService } from '../hero.service';
+import {PointService} from "../point.service";
+
 
 @Component({
   selector: 'app-point-search',
@@ -15,10 +16,10 @@ import { HeroService } from '../hero.service';
   styleUrls: [ './point-search.component.css' ]
 })
 export class PointSearchComponent implements OnInit {
-  heroes$!: Observable<Point[]>;
+  points$!: Observable<Point[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private heroService: HeroService) {}
+  constructor(private pointService: PointService) {}
 
   // Push a search term into the observable stream.
   search(term: string): void {
@@ -26,7 +27,7 @@ export class PointSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.heroes$ = this.searchTerms.pipe(
+    this.points$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
       debounceTime(300),
 
@@ -34,7 +35,7 @@ export class PointSearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.heroService.searchHeroes(term)),
+      switchMap((term: string) => this.pointService.searchPoints(term)),
     );
   }
 }

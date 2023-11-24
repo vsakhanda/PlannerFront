@@ -17,12 +17,12 @@ export class PointFormComponent {
     'Dr. IQ', this.powers[0],
     3,
     3,
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
+    'Point description',
+    'our address is Kyiv  ',
+    '343435353535',
+    'http//index.thml',
+    'main',
+    'central',
     'Chuck Overstreet' );
 
   submitted = false;
@@ -33,17 +33,17 @@ export class PointFormComponent {
   newHero() {
     this.model = new Point(
       42,
-      '',
-      '',
+      '22',
+      '22',
       3,
       5,
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '');
+      '222',
+      '333',
+      '333',
+      '333123',
+      '333',
+      '222',
+      '2222');
   }
 
   skyDog(): Point {
@@ -53,12 +53,12 @@ export class PointFormComponent {
       'Fetch any object at any distance',
       7,
       8,
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
+      '3333',
+      '3123123',
+      '123123',
+      '123123',
+      '123',
+      '12312',
       'Leslie Rollover');
     console.log('My hero is called ' + myPoint.name); // "My hero is called SkyDog"
     return myPoint;

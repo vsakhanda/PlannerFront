@@ -2,7 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Point } from '../point';
-import { HeroService } from '../hero.service';
+
 
 
 @Component({
@@ -27,16 +27,16 @@ export class HomeComponent {
 
     getPoints(): void {
         this.heroService.getHeroes()
-            .subscribe(heroes => this.points = heroes.slice(1, 5));
+            .subscribe(points => this.points = points.slice(1, 5));
     }
 
     getRoutes(): void {
         this.heroService.getHeroes()
-            .subscribe(heroes => this.points = heroes.slice(1, 5));
+            .subscribe(points => this.points = points.slice(1, 5));
     }
 
     getTrips(): void {
         this.heroService.getHeroes()
-            .subscribe(heroes => this.points = heroes.slice(1, 5));
+            .subscribe(points => this.points = points.slice(1, 5));
     }*/
 }

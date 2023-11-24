@@ -2,9 +2,9 @@
 <app-point-search></app-point-search>
 <h2>Топ місця</h2>
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes"
-     routerLink="/detail/{{hero.id}}">
-    {{hero.name}}
+  <a *ngFor="let point of points"
+     routerLink="/detail/{{point.id}}">
+    {{point.name}}
   </a>
 </div>
 
